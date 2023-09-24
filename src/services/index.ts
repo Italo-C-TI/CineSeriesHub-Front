@@ -1,0 +1,1 @@
+export { getListMoviesByCategory } from "./getListMoviesByCategory";
