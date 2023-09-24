@@ -50,11 +50,9 @@ export const Home = () => {
       >
         Populares
       </button>
-      {/* Adicione mais botões ou links para outras categorias de filmes aqui */}
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {/* Verifica se nowPlayingMovies e nowPlayingMovies.results estão definidos */}
       {nowPlayingMovies && nowPlayingMovies.results && nowPlayingMovies.results.map((movie) => (
         <div key={movie.id} className="bg-white rounded-lg shadow-md p-4">
           <h2 className="text-xl font-semibold mb-2">{movie.title}</h2>
