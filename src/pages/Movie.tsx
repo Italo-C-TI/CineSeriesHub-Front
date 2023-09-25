@@ -22,7 +22,6 @@ export const Movie = () => {
     if(id){
         const { movie } = await getMovieById({id: parseInt(id)});
         setMovie(movie);
-        console.log(movie)
 
     }else{
         throw new Error("id do filme não fornecido");

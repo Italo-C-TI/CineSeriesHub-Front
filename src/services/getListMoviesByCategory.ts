@@ -5,9 +5,8 @@ import { request } from "../http/request";
 import { HttpMethods, HttpStatusCodes } from "../types&enums/http.types";
 
 export const getListMoviesByCategory: GetMovieListByCategoryApiResponseType = async ({ movieListCategory, page}:ListMoviesCategoryParams) => {
-
     const params = {
-        page: page || 1,
+        page: page,
     };
 
     const response  = await request<GetMovieListByCategoryApiResponse>({

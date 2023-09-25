@@ -4,9 +4,6 @@ import { GithubUserType } from "../types&enums/github.types";
 
 export const Footer = () => {
   const [userGithub, setUserGithub] = useState<GithubUserType>();
-
-
-
   useEffect(() => {
     const getProjectCreatorGithub = async () => {
       try {
