@@ -1,5 +1,5 @@
 import { UnexpectedError } from "../errors";
-import { GetMovieListByCategoryApiResponse, GetMovieListByCategoryApiResponseType, ListMoviesCategoryParams } from "../types&enums/movieListCategory.types";
+import { GetMovieListByCategoryApiResponse, GetMovieListByCategoryApiResponseType, ListMoviesCategoryParams } from "../types&enums/movieListByCategory.types";
 import { baseMoviesUrl } from "../urls/movies";
 import { request } from "../http/request";
 import { HttpMethods, HttpStatusCodes } from "../types&enums/http.types";
