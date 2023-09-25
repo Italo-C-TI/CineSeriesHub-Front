@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Loading } from "../components";
 import { MovieByDetailsInterface } from "../types&enums/movies.types";

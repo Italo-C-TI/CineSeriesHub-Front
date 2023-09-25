@@ -6,9 +6,6 @@ import { Page } from "../types&enums/pages.types";
 
 export const Home = () => {
   const [isLoading,setIsLoading] = useState(false);
-  const [popularMovies,setPopular] = useState<MoviesInterface>();
-  const [topRatedMovies,setTopRatedMovies] = useState<MoviesInterface>();
-  const [nowPlayingMovies,setNowPlayingMovies] = useState<MoviesInterface>();
   const [listMovies,setListMovies] = useState<MoviesInterface>();
   const [movieListCategory,setMovieListCategory] = useState<MovieListCategoryEnum>(MovieListCategoryEnum.NOW_PLAYING);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -48,15 +45,6 @@ export const Home = () => {
       setListMovies(movies);
     }
 
-    if( listCategory === MovieListCategoryEnum.NOW_PLAYING){
-      setNowPlayingMovies(movies);
-    }
-    if( listCategory === MovieListCategoryEnum.TOP_RATED){
-      setTopRatedMovies(movies);
-    }
-    if( listCategory === MovieListCategoryEnum.POPULAR){
-      setPopular(movies);
-    }
     setPage({current: movies.page, total_pages:movies.total_pages});
 
     } catch (error) {
