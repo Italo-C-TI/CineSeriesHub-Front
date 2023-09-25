@@ -9,6 +9,7 @@ export const Search = ({ searchQuery, setSearchQuery, onSearch }: SearchParams) 
     const handleSearch = async (e: React.FormEvent) => {
         e.preventDefault();
         onSearch();
+        setSearchQuery("");
       };
     return (
         <form className="group relative my-10 mx-5 flex-auto" onSubmit={handleSearch}>
