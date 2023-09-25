@@ -68,7 +68,7 @@ export const Home = () => {
           className={`mr-4 ${movieListCategory === MovieListCategoryEnum.NOW_PLAYING ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} py-2 px-7 rounded`}
           onClick={() => setMovieListCategory(MovieListCategoryEnum.NOW_PLAYING)}
         >
-         Nos cinemas
+         Nos Cinemas
         </button>
         <button
           className={`mr-4 ${movieListCategory === MovieListCategoryEnum.TOP_RATED ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} py-2 px-4 rounded`}
@@ -80,7 +80,7 @@ export const Home = () => {
           className={`mr-4 ${movieListCategory === MovieListCategoryEnum.POPULAR ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} py-2 px-4 rounded`}
           onClick={() => setMovieListCategory(MovieListCategoryEnum.POPULAR)}
         >
-          Populares
+          Mais Populares
         </button>
 
       </div>

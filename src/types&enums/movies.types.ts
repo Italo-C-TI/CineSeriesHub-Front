@@ -1,4 +1,4 @@
-export interface MovieInterface  {
+export interface MovieByListInterface  {
     id: number;
     adult: boolean;
     title: string;
@@ -12,12 +12,35 @@ export interface MovieInterface  {
 }
   
 export interface MoviesInterface {
-  results: MovieInterface[];
+  results: MovieByListInterface[];
   page: number;
   total_pages:number;
 }
 
 export interface MovieParams  {
   id:string;
+}
+
+export interface MovieByDetailsInterface  {
+  id: number;
+  budget:number;
+  overview:string;
+  title:string;
+  poster_path:string;
+  backdrop_path:string;
+  genres: GenresMovie[],
+  production_companies: ProductionCompanies[],
+  release_date:string;
+}
+
+interface GenresMovie {
+  id:number,
+  name:string;
+}
+interface ProductionCompanies {
+  id: number,
+  logo_path: string,
+  name: string,
+  origin_country:string
 }
 

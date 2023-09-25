@@ -1,5 +1,5 @@
 import { QueryObserverResult } from "react-query";
-import { MovieInterface } from "./movies.types";
+import { MovieByListInterface } from "./movies.types";
 
 export enum MovieListCategoryEnum {
     NOW_PLAYING = "now_playing",
@@ -17,7 +17,7 @@ export interface ListMoviesCategoryParams {
 
   
   type MoviesHookReturn = {
-    results: MovieInterface[];
+    results: MovieByListInterface[];
     page: number;
     total_pages:number;
     isSuccess: boolean,
@@ -31,7 +31,7 @@ export interface GetMovieListByCategoryApiResponse {
 }
 
 export interface MoviesInterface{
-    results: MovieInterface[],
+    results: MovieByListInterface[],
     page: number,
     total_pages: number
 }

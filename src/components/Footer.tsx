@@ -21,8 +21,8 @@ export const Footer = () => {
 
   return (
     <footer className="p-4 text-center">
-      <div>
-        Projeto Criado Por
+      <div className="text-fuchsia-400	">
+        Site Criado Por
         <br />
         {userGithub && (
           <>
