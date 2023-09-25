@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getListMoviesByCategory } from "../services";
+import { getListMoviesByCategory, getListMoviesBySearch } from "../services";
 import {  MovieListCategoryEnum, MoviesInterface } from "../types&enums/movieListByCategory.types";
 import { MovieCard,Search,Loading } from "../components";
 
@@ -10,14 +10,30 @@ export const Home = () => {
   const [nowPlayingMovies,setNowPlayingMovies] = useState<MoviesInterface>();
   const [listMovies,setListMovies] = useState<MoviesInterface>();
   const [movieListCategory,setMovieListCategory] = useState<MovieListCategoryEnum>(MovieListCategoryEnum.NOW_PLAYING);
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
+  const handleSearch = async () => {
+    setIsLoading(true);
+    try {
+        setMovieListCategory(MovieListCategoryEnum.UNKNOWN);
+        const response = await getListMoviesBySearch({search:searchQuery});
+        setListMovies(response.movies);
+        console.log(response.movies);
+      } catch (error) {
+      console.error("Erro ao pesquisar filmes", error);
+    }
+
+    setIsLoading(false);
+  };
 
   const getMovies = async (listCategory: MovieListCategoryEnum, page?: number) => {
     setIsLoading(true);
     try {
     const { movies } = await getListMoviesByCategory({movieListCategory: listCategory, page :page || 1});
- 
-    setListMovies(movies);
+    
+    if(listCategory !== MovieListCategoryEnum.UNKNOWN){
+      setListMovies(movies);
+    }
 
     if( listCategory === MovieListCategoryEnum.NOW_PLAYING){
       setNowPlayingMovies(movies);
@@ -28,11 +44,13 @@ export const Home = () => {
     if( listCategory === MovieListCategoryEnum.POPULAR){
       setPopular(movies);
     }
-    setIsLoading(false);
     console.log(movies)
     } catch (error) {
       console.error("Erro ao buscar filmes", error);
     }
+
+    setIsLoading(false);
+
   };
 
   useEffect(() => {
@@ -43,7 +61,7 @@ export const Home = () => {
 
   return (
     <div className="container mx-auto p-4">
-        <Search />
+        <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={handleSearch}/>
       <h1 className="text-3xl font-semibold mb-4">Listas de Filmes</h1>
       <div className="flex justify-evenly	 flex-wrap	gap-y-2	">
         <button
