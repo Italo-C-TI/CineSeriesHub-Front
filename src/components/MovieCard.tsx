@@ -3,13 +3,10 @@ import { StarIcon } from "../assets";
 import { MovieByListInterface } from "../types&enums/movies.types"
 import { baseSearchMovieImgUrl } from "../urls/movies";
 
-
-
 interface MoviesCardParamsInterface {
     movie: MovieByListInterface;
 }
   
-
 export const MovieCard = ({movie}: MoviesCardParamsInterface) => {
     return (
       <div className="flex items-start space-x-6 p-6 my-10 bg-slate-400 ">

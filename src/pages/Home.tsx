@@ -94,7 +94,7 @@ export const Home = () => {
       </div>}
 
     </div>
-    { listMovies?.page && 
+    { movieListCategory!== MovieListCategoryEnum.UNKNOWN && listMovies?.page && 
         <div className="flex justify-center">
           <Pagination page={{ current: page.current, total_pages: listMovies.total_pages }} setPage={setPage} onPageChange={onPageChange} />
         </div>
