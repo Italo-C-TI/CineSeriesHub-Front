@@ -21,11 +21,11 @@ Este repositório é o front-end do projeto CineSeriesHub, um aplicativo web que
 
 - **Tailwind CSS**
   - **Benefício:** Tailwind CSS é um framework CSS altamente configurável que permite estilizar aplicativos web de forma eficiente. Ele fornece classes utilitárias prontas para uso que aceleram o desenvolvimento do front-end e mantêm um design consistente.
-  - **Apoio Argumentativo:** [Documentação vite sobre PostCss](https://pt.vitejs.dev/guide/features.html#postcss) , [Por que usar o Tailwind CSS?](https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar/#:~:text=O%20Tailwind%20CSS%20pode%20ser,oferece%20em%20termos%20de%20personaliza%C3%A7%C3%A3o.) , [Saiba mais sobre Tailwind CSS](https://tailwindcss.com/)
+  - **Apoio Argumentativo:**  [Por que usar o Tailwind CSS?](https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar/#:~:text=O%20Tailwind%20CSS%20pode%20ser,oferece%20em%20termos%20de%20personaliza%C3%A7%C3%A3o.) , [Saiba mais sobre Tailwind CSS](https://tailwindcss.com/)
 
 - **PostCSS**
   - **Benefício:** PostCSS é uma ferramenta de processamento de CSS que permite adicionar funcionalidades modernas ao CSS, como variáveis, mixins e autoprefixing. Ele ajuda a manter o código CSS limpo e organizado e é uma excelente combinação com o Vite devido às configurações do Vite.
-  - **Apoio Argumentativo:** [Saiba mais sobre PostCSS](https://postcss.org/)
+  - **Apoio Argumentativo:** [Documentação vite sobre PostCss](https://pt.vitejs.dev/guide/features.html#postcss) , [Saiba mais sobre PostCSS](https://postcss.org/)
 
 ## Funcionalidades Principais
 
